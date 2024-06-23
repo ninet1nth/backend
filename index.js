@@ -35,6 +35,9 @@ app.get('/me', checkAuth, UserController.getMe);
 app.post('/dateRecording',UserController.dateRecording);
 app.get('/services', UserController.getServices);
 app.get('/dateRecording', UserController.getDateTime);
+app.get('/', (req, res) => {
+    res.send('Welcome to the main page!');
+  });
 
 app.listen(PORT, (err) =>{
      
